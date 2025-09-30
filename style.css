@@ -1,0 +1,205 @@
+/* BODY & GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    background-color: white;
+    text-align: center; 
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #171717;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+/* NAVIGATION */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: grey;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* DETAIL SECTION (IMAGE + TEXT) */
+.Detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  /* Center horizontally on the page */
+    margin-top: 50px;
+}
+
+/* IMAGE */
+.Detail img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* X-offset, Y-offset, Blur, Spread, Color */
+    cursor: pointer;
+    margin-right: 70px; /* Space between image and text */
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.Detail img:hover {
+    transform: scale(1.1);
+}
+
+/* TEXT CONTENT WRAPPER (Name, Stream & Role) */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align text */
+}
+
+/* NAME HEADING */
+.text-content h1 {
+    margin: 0;            /* Remove default margin */
+    color: #171717;
+    font-size: 40px;
+}
+
+/* STREAM INFORMATION */
+.Stream h2 {
+    font-size: 20px;
+    margin: 3px 0;
+    text-align: left;
+}
+
+/* ROLE HEADING */
+.text-content h2 {
+    margin: 15px 0 0 0;
+    color: #171717;
+    font-size: 20px;
+}
+
+/* ABOUT SECTION */
+.About p {
+    font-size: 18px;
+    margin: 40px 250px 0 250px;
+    text-align: justify;
+}
+
+/* ANIMATION FOR EACH LETTER */
+.name-letter {
+    display: inline-block;
+    animation: jump 0.6s;
+    animation-fill-mode: both;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* SCROLL BEHAVIOR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* FOOTER */
+footer {
+    background-color: #171717;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    font-size: 14px;
+}
+
+.Education
+{
+    text-align: left;
+    margin: 0 0 0 30px;
+}
+
+.Education h1
+{
+    color: #1A1A1D;
+    font-size: 35px;
+}
+
+.Education img
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+}
+
+.Experience {
+    text-align: left; /* Aligns all content to the left */
+    margin-left: 30px; /* Adjust as needed */
+  }
+
+.Experience h1
+{
+    color: #1A1A1D;
+    font-size: 35px;
+}
+  
+  .work-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px 30px;
+  }
+  
+  .work-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .work-entry h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .work-entry p {
+    font-size: 16px;
+    margin: 5px 0 0 0; /* Slight top margin to create space */
+  }
+  
+  .work-entry h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+    color: gray;
+  }
+  
