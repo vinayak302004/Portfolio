@@ -26,12 +26,6 @@ This is my personal portfolio website built using **React + Vite** to showcase m
 
 ---
 
-## 📸 Preview
-
-(Add your screenshots here)
-
----
-
 ## ⚙️ Installation & Setup
 
 Clone the repository:
