@@ -242,9 +242,67 @@ footer {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  animation: pulse 2s infinite;
 }
 
 .mic-btn:hover {
   background: #0056b3;
   transform: scale(1.1);
+}
+
+/* 💬 Floating Button */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00adb5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: #111;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.messages {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.user {
+  text-align: right;
+}
+
+.bot {
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+.voice-hint {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }

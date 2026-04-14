@@ -87,6 +87,13 @@ function Hero() {
         document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("education")) {
         document.getElementById("education")?.scrollIntoView({ behavior: "smooth" });
+      } else if (command.includes("ask")) {
+        document.querySelector(".chatbox input")?.focus();
+      } else if (
+        command.includes("introduce") ||
+        command.includes("about yourself")
+      ) {
+        handleSpeak();
       } else {
         alert("Command not recognized 😅");
       }
@@ -152,12 +159,19 @@ function Hero() {
           </button>
 
           {/* 🎤 Voice Command */}
-          <button className="mic-btn" onClick={handleVoiceCommand}>
+          <button
+            className="mic-btn"
+            onClick={handleVoiceCommand}
+            title="Try voice commands like: 'show projects', 'introduce yourself'"
+          >
             {isListening ? "🎙" : "🎤"}
           </button>
 
+          <span className="voice-hint">
+            Try saying: "show projects", "introduce"
+          </span>
+          
         </div>
-
       </div>
 
       <div className="about-right">
