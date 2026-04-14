@@ -79,7 +79,7 @@ function Hero() {
         document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("experience")) {
         document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-      } else if (command.includes("acheivements")) {
+      } else if (command.includes("achievements")) {
         document.getElementById("achievements")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("contact")) {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -139,6 +139,12 @@ function Hero() {
           >
             View Projects
           </button>
+
+          <a href="/Assets/Vinayak_Resume.pdf" download>
+            <button>
+              Resume
+            </button>
+          </a>
 
           {/* 🔊 Text-to-Speech */}
           <button className="mic-btn" onClick={handleSpeak}>
