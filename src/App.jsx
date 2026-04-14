@@ -1,5 +1,5 @@
 import Header from "./Components/Header";
-import Hero from "./Components/Hero";
+import About from "./Components/About";
 import Education from "./Components/Education";
 import Experience from "./Components/Experience";
 import Skills from "./Components/Skills";
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <About />
       <Education />
       <Experience />
       <Skills />
