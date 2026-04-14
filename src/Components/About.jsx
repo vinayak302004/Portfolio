@@ -79,7 +79,7 @@ function Hero() {
         document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("experience")) {
         document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-      } else if (command.includes("acheivements")) {
+      } else if (command.includes("achievements")) {
         document.getElementById("achievements")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("contact")) {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -87,6 +87,13 @@ function Hero() {
         document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
       } else if (command.includes("education")) {
         document.getElementById("education")?.scrollIntoView({ behavior: "smooth" });
+      } else if (command.includes("ask")) {
+        document.querySelector(".chatbox input")?.focus();
+      } else if (
+        command.includes("introduce") ||
+        command.includes("about yourself")
+      ) {
+        handleSpeak();
       } else {
         alert("Command not recognized 😅");
       }
@@ -140,18 +147,31 @@ function Hero() {
             View Projects
           </button>
 
+          <a href="/Assets/Vinayak_Resume.pdf" download>
+            <button>
+              Resume
+            </button>
+          </a>
+
           {/* 🔊 Text-to-Speech */}
           <button className="mic-btn" onClick={handleSpeak}>
             {isSpeaking ? "⏹" : "🔊"}
           </button>
 
           {/* 🎤 Voice Command */}
-          <button className="mic-btn" onClick={handleVoiceCommand}>
+          <button
+            className="mic-btn"
+            onClick={handleVoiceCommand}
+            title="Try voice commands like: 'show projects', 'introduce yourself'"
+          >
             {isListening ? "🎙" : "🎤"}
           </button>
 
+          <span className="voice-hint">
+            Try saying: "show projects", "introduce"
+          </span>
+          
         </div>
-
       </div>
 
       <div className="about-right">
