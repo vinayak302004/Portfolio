@@ -147,12 +147,6 @@ function Hero() {
             View Projects
           </button>
 
-          <a href="/Assets/Vinayak_Resume.pdf" download>
-            <button>
-              Resume
-            </button>
-          </a>
-
           {/* 🔊 Text-to-Speech */}
           <button className="mic-btn" onClick={handleSpeak}>
             {isSpeaking ? "⏹" : "🔊"}
