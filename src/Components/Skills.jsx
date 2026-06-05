@@ -17,12 +17,13 @@ function Skills() {
 
         <div className="card">
           <h3>Web Development</h3>
-          <p>HTML, CSS, JS, React, Node.js</p>
+          <p>HTML, CSS, JS, React, Node.js, TypeScript</p>
         </div>
 
         <div className="card">
           <h3>Database</h3>
-          <p>PostgreSQL</p>
+          <p>MySQL</p>
+          <p>MongoDB</p>
         </div>
 
         <div className="card">
@@ -37,7 +38,7 @@ function Skills() {
 
         <div className="card">
           <h3>Other</h3>
-          <p>Electron, TypeScript, System Design</p>
+          <p>Electron, System Design</p>
         </div>
 
       </div>

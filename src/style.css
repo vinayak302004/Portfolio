@@ -11,15 +11,25 @@ body {
 }
 
 /* HEADER */
+/* HEADER */
 header {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  align-items: center;
+
+  padding: 0 50px;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 header nav a {
@@ -305,4 +315,117 @@ input {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+/* =========================
+   SOCIAL HANDLES SECTION
+========================= */
+
+#handles {
+  padding: 100px 30px;
+}
+
+/* Side by side container */
+.handles-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Main Card */
+.handle-card {
+  width: 100%;
+  padding: 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+  transition: 0.4s ease;
+}
+
+.handle-card:hover {
+  transform: translateY(-6px);
+}
+
+.handle-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00d4ff;
+}
+
+/* Images */
+.stats-img,
+.graph-img,
+.calendar-img,
+.github-stats {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.stats-img:hover,
+.graph-img:hover,
+.github-stats:hover {
+  transform: scale(1.02);
+}
+
+/* GitHub top section */
+.github-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Calendar */
+.calendar-box {
+  background: black;
+  padding: 16px;
+  border-radius: 16px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.profile-btn {
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
+  padding: 12px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  background: #00d4ff;
+  transition: 0.3s ease;
+}
+
+.profile-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0,212,255,0.45);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .handles-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .handles-title {
+    font-size: 2.2rem;
+  }
+
+  .handle-card {
+    padding: 20px;
+  }
+
+  .handle-card h2 {
+    font-size: 1.5rem;
+  }
 }
