@@ -127,7 +127,7 @@ function Hero() {
         </h2>
 
         <p>
-          I am currently a Third Year student at Rajarambapu Institute of Technology, Sangli (RIT), 
+          I am currently a Final Year student at Rajarambapu Institute of Technology, Sangli (RIT), 
           pursuing a B.Tech degree in Computer Science (AIML) with a Minor in Robotics & Automation.
           
           I am interested in programming (C, C++, Java), web development, and exploring new technologies. 
