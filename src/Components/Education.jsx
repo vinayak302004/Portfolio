@@ -7,7 +7,7 @@ function Education() {
         <h2>Rajarambapu Institute of Technology</h2>
         <p>B.Tech CSE (AIML)</p>
         <p>Minor in Robotics & Automation</p>
-        <p>2023 - 2027 | CGPA: 8.62</p>
+        <p>2023 - 2027 | CGPA: 8.67</p>
       </div>
 
       <div className="card">
