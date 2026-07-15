@@ -8,7 +8,7 @@ function Projects() {
         <div className="card">
           <h2>Smart Attendance System</h2>
           <p>QR + AI + Face Recognition (Ongoing)</p>
-          <a href="https://github.com/vinayak302004/Attendance_System.git" target="_blank">GitHub Link</a>
+          <a href="https://github.com/vinayak302004/Proxy_Resistant_Attendance_System" target="_blank">GitHub Link</a>
         </div>
 
         <div className="card">
