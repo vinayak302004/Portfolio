@@ -133,7 +133,7 @@ function Hero() {
           I am interested in programming (C, C++, Java), web development, and exploring new technologies. 
 
           I am Lead of the Software Team at GDG (GDSC) on Campus RIT. 
-          My skills include DSA, Java, Full Stack Development, SQL, Problem Solving, and Communication Skills.
+          My skills are DSA, Java, Full Stack Development, SQL, Problem Solving, and Communication Skills.
         </p>
 
         <div className="about-buttons">
