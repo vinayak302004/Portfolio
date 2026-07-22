@@ -127,13 +127,13 @@ function Hero() {
         </h2>
 
         <p>
-          I am currently a Final Year student at Rajarambapu Institute of Technology, Sangli (RIT), 
+          I am currently a Final Year student at Rajarambapu Institute of Technology (RIT), Sangli,  
           pursuing a B.Tech degree in Computer Science (AIML) with a Minor in Robotics & Automation.
           
           I am interested in programming (C, C++, Java), web development, and exploring new technologies. 
 
-          I am Co-Lead of the Software Team at GDG (GDSC) on Campus RIT. 
-          My skills include DSA in Java, Web Development, WordPress, Problem Solving, and Communication Skills.
+          I am Lead of the Software Team at GDG (GDSC) on Campus RIT. 
+          My skills include DSA, Java, Full Stack Development, SQL, Problem Solving, and Communication Skills.
         </p>
 
         <div className="about-buttons">
