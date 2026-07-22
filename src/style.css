@@ -151,9 +151,13 @@ h1 {
   line-height: 1;
 }
 
+.card{
+    transition: all .3s ease;
+}
 
-.card:hover {
-  transform: scale(1.05);
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,212,255,.25);
 }
 
 /* GRID */
