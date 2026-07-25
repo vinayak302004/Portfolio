@@ -14,14 +14,14 @@ function Hero() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
 
-  const text = `I am Vinayak, currently a Third Year student at Rajarambapu Institute of Technology Sangli (RIT), 
+  const text = `I am Vinayak, currently a Final Year student at Rajarambapu Institute of Technology (RIT), Sangli,  
   pursuing a B Tech degree in Computer Science with a Minor in Robotics and Automation.
   
   I am interested in programming, web development, and exploring new technologies.
   
-  I am Co-Lead of the Software Team at GDG on Campus RIT.
+  I am Lead of the Software Team at GDG on Campus RIT.
   
-  My skills include DSA in Java, Web Development, WordPress, Problem Solving, and Communication Skills.`;
+  My skills are DSA in Java, Web Development, WordPress, Problem Solving, and Communication Skills.`;
 
   useEffect(() => {
     const interval = setInterval(() => {
