@@ -1,9 +1,18 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
+import { GoogleGenAI } from "@google/genai";
+
+dotenv.config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+});
 
 const knowledge = `
 Name: Vinayak Sanjay Dhulubulu
@@ -12,50 +21,64 @@ Education:
 B.Tech Computer Science (AIML), RIT Sangli
 
 Skills:
-Java, DSA, Web Development, WordPress
+Java
+DSA
+React
+Node.js
+Web Development
+WordPress
 
 Projects:
+Proxy Resistant Real-Time QR Based Smart Attendance System
+
 Rein – Cross Platform Remote Input System
 
 Role:
 Co-Lead Software Team at GDG on Campus RIT
 `;
 
-app.post("/chat", async (req, res) => {
-  const { message } = req.body;
+app.get("/", (req, res) => {
+  res.send("Portfolio chatbot backend is running.");
+});
 
+app.post("/chat", async (req, res) => {
   try {
-    const response = await fetch("http://localhost:11434/api/generate", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "phi3",
-        prompt: `
+    const { message } = req.body;
+
+    const prompt = `
 You are Vinayak's professional AI assistant.
 
 Rules:
-- Answer clearly
-- Use only given data
-- If unknown say "Not mentioned"
+- Answer professionally.
+- Use only the information below.
+- If something isn't mentioned, reply "That information isn't available in my knowledge base."
 
-Data:
+Knowledge:
 ${knowledge}
 
-Question: ${message}
-        `,
-        stream: false,
-      }),
+Question:
+${message}
+`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
     });
 
-    const data = await response.json();
+    res.json({
+      reply: response.text,
+    });
+  } catch (error) {
+    console.log(error);
 
-    res.json({ reply: data.response });
-  } catch (err) {
-    console.error("Ollama Error:", err);
-    res.status(500).json({ error: "Ollama not responding" });
+    res.status(500).json({
+      error: "Something went wrong",
+    });
   }
 });
 
-app.listen(5000, () => console.log("Server running on 5000"));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
