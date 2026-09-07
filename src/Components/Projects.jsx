@@ -26,7 +26,7 @@ function Projects() {
 
     {
       title: "Razorpay GrowthAI",
-      status: "Ongoing",
+      status: "Complete",
       category: "AI + FinTech",
       description:
         "An AI-powered revenue-growth and agentic commerce platform that helps merchants identify revenue opportunities, generate campaigns, recommend products, and convert recommendations into Razorpay payments.",
