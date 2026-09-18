@@ -9,7 +9,7 @@ function Experience() {
 
         <div className="experience-role">
           <h3>Lead of Software Team</h3>
-          <span>Oct 2025 - Present</span>
+          <span>Oct 2025 - Sept 2026</span>
         </div>
 
         <ul>
