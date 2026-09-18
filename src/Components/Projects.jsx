@@ -25,7 +25,7 @@ function Projects() {
     },
 
     {
-      title: "Razorpay GrowthAI",
+      title: "RazorGrowthAI",
       status: "Completed",
       category: "AI + FinTech",
       description:
