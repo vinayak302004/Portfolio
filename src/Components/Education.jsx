@@ -25,7 +25,7 @@ function Education() {
       degree: "Secondary School Certificate (SSC)",
       specialization: "Secondary Education",
       additional: "",
-      period: "2007 – 2020",
+      period: "2011 – 2021",
       score: "71%",
       status: "SSC",
       icon: "🏫"
