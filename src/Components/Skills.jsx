@@ -1,46 +1,103 @@
 function Skills() {
+  const skills = [
+    {
+      category: "PROGRAMMING",
+      icon: "💻",
+      technologies: ["Java", "Python"],
+      description: "Core programming and application development",
+    },
+    {
+      category: "DATA STRUCTURES & ALGORITHMS",
+      icon: "🧠",
+      technologies: ["DSA", "Problem Solving", "100+ LeetCode"],
+      description: "Algorithmic thinking and coding practice",
+    },
+    {
+      category: "WEB DEVELOPMENT",
+      icon: "🌐",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "TypeScript",
+      ],
+      description: "Frontend and backend web application development",
+    },
+    {
+      category: "DATABASE",
+      icon: "🗄️",
+      technologies: ["MySQL", "MongoDB"],
+      description: "Database management and data storage",
+    },
+    {
+      category: "AI / MACHINE LEARNING",
+      icon: "🤖",
+      technologies: [
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+      ],
+      description: "Intelligent systems and AI-based applications",
+    },
+    {
+      category: "DEVELOPER TOOLS",
+      icon: "🛠️",
+      technologies: ["Docker", "Jenkins", "WordPress"],
+      description: "Development tools and deployment workflows",
+    },
+    {
+      category: "OTHER TECHNOLOGIES",
+      icon: "⚙️",
+      technologies: ["Electron", "System Design"],
+      description: "Desktop applications and software architecture fundamentals",
+    },
+  ];
+
   return (
-    <section id="skills">
-      <h1>Skills</h1>
+    <section id="skills" className="skills-section">
+      <div className="section-heading">
+        <span className="section-label">
+          TECHNICAL EXPERTISE
+        </span>
 
-      <div className="grid">
+        <h1>Skills & Technologies</h1>
 
-        <div className="card">
-          <h3>Programming</h3>
-          <p>Java, Python</p>
-        </div>
+        <p>
+          Technologies and tools I use to build applications,
+          solve problems, and explore artificial intelligence.
+        </p>
+      </div>
 
-        <div className="card">
-          <h3>DSA</h3>
-          <p>Problem Solving (100+ LeetCode)</p>
-        </div>
+      <div className="skills-container">
+        {skills.map((skill, index) => (
+          <div className="skill-card" key={index}>
+            <div className="skill-card-top">
+              <div className="skill-icon">
+                {skill.icon}
+              </div>
 
-        <div className="card">
-          <h3>Web Development</h3>
-          <p>HTML, CSS, JS, React, Node.js, TypeScript</p>
-        </div>
+              <span className="skill-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
 
-        <div className="card">
-          <h3>Database</h3>
-          <p>MySQL</p>
-          <p>MongoDB</p>
-        </div>
+            <h2>{skill.category}</h2>
 
-        <div className="card">
-          <h3>AI/ML</h3>
-          <p>Machine Learning, Deep Learning, NLP</p>
-        </div>
+            <p className="skill-description">
+              {skill.description}
+            </p>
 
-        <div className="card">
-          <h3>Tools</h3>
-          <p>Docker, Jenkins, WordPress</p>
-        </div>
-
-        <div className="card">
-          <h3>Other</h3>
-          <p>Electron, System Design</p>
-        </div>
-
+            <div className="skill-tags">
+              {skill.technologies.map((technology, techIndex) => (
+                <span key={techIndex}>
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
