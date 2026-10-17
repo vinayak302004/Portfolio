@@ -1,8 +1,8 @@
 function Projects() {
   const projects = [
     {
-      title: "Proxy-Resistant Smart Attendance System",
-      status: "Ongoing",
+      title: "Proxy-Resistant QR-Based Smart Attendance System",
+      status: "Completed",
       category: "AI + Full Stack",
       description:
         "A real-time smart attendance system designed to reduce proxy attendance using dynamic QR verification, face recognition and AI-based liveness detection.",
